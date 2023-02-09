@@ -13,7 +13,7 @@ function RocketsPage() {
   }
 
   return (
-    <Container fluid="xl" className="mt-3">
+    <Container fluid="xl" className="mt-5">
       <ul>
         {rockets.map((rocket) => (
           <RocketItem key={nanoid()} rocket={rocket} />

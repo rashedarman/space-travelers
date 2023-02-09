@@ -8,7 +8,7 @@ function ProfilePage() {
   return (
     <Container
       fluid="xl"
-      className="mt-3"
+      className="mt-5"
       style={{ display: 'flex', gap: '1rem' }}
     >
       <div className="w-50">

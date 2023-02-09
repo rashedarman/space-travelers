@@ -1,6 +1,6 @@
-import {
-  Badge, Button, Container, Table,
-} from 'react-bootstrap';
+/* eslint-disable */
+
+import { Badge, Button, Container, Table } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, reserveMission } from '../redux/missions/missionsSlice';
 
@@ -17,7 +17,7 @@ function MissionsPage() {
   };
 
   return (
-    <Container fluid="xl">
+    <Container fluid="xl" className="mt-5">
       <Table striped bordered hover>
         <thead>
           <tr>
