@@ -2,12 +2,16 @@ import {
   Badge, Button, Container, Table,
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { reserveMission } from '../redux/missions/missionsSlice';
+import { getMissions, reserveMission } from '../redux/missions/missionsSlice';
 
 function MissionsPage() {
   const { missions } = useSelector((state) => state.missions);
 
   const dispatch = useDispatch();
+  if (!missions.length) {
+    dispatch(getMissions());
+  }
+
   const handleClick = (id) => {
     dispatch(reserveMission(id));
   };
