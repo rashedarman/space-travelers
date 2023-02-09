@@ -13,6 +13,7 @@ export const getMissions = createAsyncThunk(FETCH, async () => {
     id: mission.mission_id,
     name: mission.mission_name,
     description: mission.description,
+    reserved: false,
   }));
 });
 
@@ -25,7 +26,8 @@ const missionsSlice = createSlice({
         if (mission.id === action.payload) {
           return {
             // set the reverse value
-            ...mission, reserved: !mission.reserved,
+            ...mission,
+            reserved: !mission.reserved,
           };
         }
         return mission;

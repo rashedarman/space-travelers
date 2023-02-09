@@ -1,6 +1,6 @@
-/* eslint-disable */
-
-import { Badge, Button, Container, Table } from 'react-bootstrap';
+import {
+  Badge, Button, Container, Table,
+} from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions, reserveMission } from '../redux/missions/missionsSlice';
 
