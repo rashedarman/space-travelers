@@ -1,19 +1,13 @@
-import { useEffect } from 'react';
 import {
   Badge, Button, Container, Table,
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMissions, reserveMission } from '../redux/missions/missionsSlice';
+import { reserveMission } from '../redux/missions/missionsSlice';
 
 function MissionsPage() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
-
   const { missions } = useSelector((state) => state.missions);
 
+  const dispatch = useDispatch();
   const handleClick = (id) => {
     dispatch(reserveMission(id));
   };
@@ -35,16 +29,19 @@ function MissionsPage() {
               <td>{mission.name}</td>
               <td>{mission.description}</td>
               <td>
-                {
-                  mission.reserved ? (
-                    <Badge bg="info">Active member</Badge>
-                  ) : (
-                    <Badge bg="secondary">NOT A MEMBER</Badge>
-                  )
-                }
+                {mission.reserved ? (
+                  <Badge bg="info">Active member</Badge>
+                ) : (
+                  <Badge bg="secondary">NOT A MEMBER</Badge>
+                )}
               </td>
               <td>
-                <Button variant={mission.reserved ? 'danger' : 'light'} onClick={() => handleClick(id)}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</Button>
+                <Button
+                  variant={mission.reserved ? 'danger' : 'light'}
+                  onClick={() => handleClick(id)}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </Button>
               </td>
             </tr>
           ))}
