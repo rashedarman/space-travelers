@@ -47,6 +47,8 @@
   <ul>
     <li>React.js</li>
     <li>Redux</li>
+    <li>React Bootstrap</li>
+    <li>React Router</li>
   </ul>
 </details>
 
@@ -87,9 +89,9 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  git clone git@github.com:rashedarman/bookstore.git
+git clone git@github.com:rashedarman/space-travelers.git
 
-  cd bookstore
+cd space-travelers
 ```
 
 ### Install
@@ -162,8 +164,8 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] Improve page styling
-- [ ] Persist in localstorage
+- [x] Improve page styling
+- [x] Persist in localstorage
 - [ ] Reserve Dragons
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -182,7 +184,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+If you like this project please consider giving it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
