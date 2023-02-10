@@ -36,6 +36,8 @@
 
 **Space Travelers' Hub** is a single-page application that uses the SpaceX API. It allows users to reserve rockets and dragons, join new missions, and keep track of status from dashboard. Built with React and Redux.
 
+![Screenshot](./screenshot.png)
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
