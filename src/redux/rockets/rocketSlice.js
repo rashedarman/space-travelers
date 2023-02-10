@@ -36,11 +36,12 @@ const rocketsSlice = createSlice({
       return { ...state, rockets };
     },
   },
-  extraReducers: {
-    [getRockets.fulfilled]: (state, action) => {
-      const currState = state;
-      currState.rockets = action.payload;
-    },
+
+  extraReducers: (builder) => {
+    builder.addCase(getRockets.fulfilled, (state, action) => ({
+      ...state,
+      rockets: action.payload,
+    }));
   },
 });
 

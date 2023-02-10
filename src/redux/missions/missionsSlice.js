@@ -35,11 +35,11 @@ const missionsSlice = createSlice({
       return { ...state, missions };
     },
   },
-  extraReducers: {
-    [getMissions.fulfilled]: (state, action) => {
-      const currState = state;
-      currState.missions = action.payload;
-    },
+  extraReducers: (builder) => {
+    builder.addCase(getMissions.fulfilled, (state, action) => ({
+      ...state,
+      missions: action.payload,
+    }));
   },
 });
 
