@@ -9,7 +9,6 @@ const initialState = {
 
 export const getRockets = createAsyncThunk(FETCH, async () => {
   const rockets = await api.get('/rockets');
-  console.log(rockets);
   return rockets.data.map((rocket) => ({
     id: rocket.id,
     name: rocket.rocket_name,

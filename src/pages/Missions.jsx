@@ -2,18 +2,22 @@ import {
   Badge, Button, Container, Table,
 } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { reserveMission } from '../redux/missions/missionsSlice';
+import { getMissions, reserveMission } from '../redux/missions/missionsSlice';
 
 function MissionsPage() {
-  const dispatch = useDispatch();
   const { missions } = useSelector((state) => state.missions);
+
+  const dispatch = useDispatch();
+  if (!missions.length) {
+    dispatch(getMissions());
+  }
 
   const handleClick = (id) => {
     dispatch(reserveMission(id));
   };
 
   return (
-    <Container fluid="xl">
+    <Container fluid="xl" className="mt-5">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -29,16 +33,19 @@ function MissionsPage() {
               <td>{mission.name}</td>
               <td>{mission.description}</td>
               <td>
-                {
-                  mission.reserved ? (
-                    <Badge bg="info">Active member</Badge>
-                  ) : (
-                    <Badge bg="secondary">NOT A MEMBER</Badge>
-                  )
-                }
+                {mission.reserved ? (
+                  <Badge bg="info">Active member</Badge>
+                ) : (
+                  <Badge bg="secondary">NOT A MEMBER</Badge>
+                )}
               </td>
               <td>
-                <Button variant={mission.reserved ? 'danger' : 'light'} onClick={() => handleClick(id)}>{mission.reserved ? 'Leave Mission' : 'Join Mission'}</Button>
+                <Button
+                  variant={mission.reserved ? 'danger' : 'light'}
+                  onClick={() => handleClick(id)}
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </Button>
               </td>
             </tr>
           ))}

@@ -154,13 +154,6 @@ You can deploy this project using:
 - Twitter: [@rashedarman21](https://twitter.com/rashedarman21)
 - LinkedIn: [@rashedarman](https://linkedin.com/in/rashedarman)
 
-👤 **Israel CHIZUNGU**
-
-- GitHub: [chiztechnology](https://github.com/chiztechnology)
-- Twitter: [IsraelChizungu](https://twitter.com/IsraelChizungu)
-- LinkedIn: [IsraelChizungu](https://www.linkedin.com/in/israelchizungu/)
-
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

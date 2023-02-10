@@ -6,7 +6,11 @@ function ProfilePage() {
   const { missions } = useSelector((state) => state.missions);
 
   return (
-    <Container fluid="xl" className="mt-3" style={{ display: 'flex' }}>
+    <Container
+      fluid="xl"
+      className="mt-5"
+      style={{ display: 'flex', gap: '1rem' }}
+    >
       <div className="w-50">
         <h3>My Missions</h3>
         <ListGroup>
